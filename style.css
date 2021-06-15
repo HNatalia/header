@@ -6,11 +6,12 @@
 
 header {
   width: 100vw;
-  height: 100vh;
+  height: 663px;
   background: linear-gradient(153deg, rgb(38, 40, 44), 70%, rgb(45, 48, 54));
   display: flex;
   align-items: center;
   font-family: Open Sans, sans-serif;
+  overflow: hidden;
 }
 
 .info-container {
@@ -19,7 +20,8 @@ header {
   justify-content: space-between;
   height: 80%;
   width: 45%;
-  padding: 50px 0 20px 7%;
+  padding: 50px 0 20px 10%;
+  z-index: 1;
 }
 
 ul {
@@ -95,10 +97,157 @@ button {
               inset -1px 0px 1px 2px rgba(255, 195, 133, 1);
   color: rgb(38, 40, 44);
   transition: .5s;
+  outline: none;
 }
 
 button:hover {
   transform: scale(1.05);
   box-shadow: -2px -1px 6px 3px rgba(255, 195, 133, 0.4),
               2px 2px 6px 3px rgba(0, 0, 0, 0.7);
+}
+
+.shapes-container {
+  position: absolute;
+  right: 0;
+  top: 23px;
+  width: 55%;
+  height: 663px;
+}
+
+.shape:nth-child(1) {
+  position: absolute;
+  top: 50px;
+  right: 140px;
+  width: 50%;
+  height: 140px;
+  background: linear-gradient(to right, hsl(228, 6%, 16%), 50%, rgb(52, 58, 63));
+  border-top-right-radius: 200px;
+  border-bottom-left-radius: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 1px 1px 4px 2px rgba(0, 0, 0, 0.2),
+              inset -3px -2px 4px 2px rgb(55, 61, 66);
+}
+
+.shape:nth-child(2) {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(-240deg, rgb(38, 39, 43), 50%, rgb(52, 58, 63));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 2px 2px 4px 2px rgba(0, 0, 0, 0.2),
+              inset -2px -2px 4px 2px rgb(55, 61, 66);
+}
+
+.shape:nth-child(3) {
+  position: absolute;
+  top: 190px;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(-240deg, rgb(38, 39, 43), 50%, rgb(52, 58, 63));
+  box-shadow: inset 2px 2px 4px 2px rgba(0, 0, 0, 0.2),
+              inset -2px -2px 4px 2px rgb(55, 61, 66);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shape:nth-child(4) {
+  position: absolute;
+  bottom: 173px;
+  right: 300px;
+  width: 50%;
+  height: 140px;
+  border-top-right-radius: 200px;
+  border-bottom-left-radius: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, rgb(38, 39, 43), 50%, rgb(52, 58, 63));
+  box-shadow: inset 1px 1px 4px 2px rgba(0, 0, 0, 0.2),
+              inset -3px -2px 4px 2px rgb(55, 61, 66);
+}
+
+.shape:nth-child(5) {
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  right: 0;
+  bottom: 23px;
+  border-bottom-right-radius: 200px;
+  border-bottom-left-radius: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, rgb(38, 39, 43), 50%, rgb(52, 58, 63));
+  box-shadow: inset 1px 1px 4px 2px rgba(0, 0, 0, 0.2),
+              inset -3px -2px 4px 2px rgb(55, 61, 66);
+}
+
+.shape:nth-child(6) {
+  position: absolute;
+  right: 300px;
+  bottom: 23px;
+  height: 150px;
+  width: 150px;
+  border-top-left-radius: 200px;
+  background: linear-gradient(to right, rgb(38, 39, 43), 50%, rgb(52, 58, 63));
+  box-shadow: inset 1px 1px 4px 2px rgba(0, 0, 0, 0.2),
+              inset -3px -2px 4px 2px rgb(55, 61, 66);
+}
+
+.inner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(to right, rgb(40, 42, 46), rgb(48, 52, 55));
+  box-shadow: 2px 2px 6px 4px rgb(40, 42, 46),
+              -2px -2px 6px 4px rgb(52, 58, 63),
+              inset 1px 1px 8px -2px rgb(40, 42, 46),
+              inset -3px -3px 8px -4px rgb(52, 58, 63);
+  
+}
+
+.main-inner {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(-240deg, rgb(38, 39, 43), 50%, rgb(52, 58, 63));
+  box-shadow: inset 2px 2px 4px 2px rgba(0, 0, 0, 0.2),
+              inset -2px -2px 4px 2px rgb(55, 61, 66);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-inner > .inner {
+  background: rgb(255, 195, 133);
+  box-shadow: 2px 2px 6px 4px rgb(40, 42, 46),
+              -2px -2px 6px 4px rgb(52, 58, 63),
+              inset -3px -3px 8px 4px rgb(208, 152, 103);
+}
+
+@media screen and (max-width: 655px) {
+  .info-container {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .shapes-container {
+    display: none;
+  }
+
+  .info-container {
+    width: 100%;
+    padding-right: 10%;
+  }
 }
